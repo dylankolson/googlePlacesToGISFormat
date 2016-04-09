@@ -16,7 +16,8 @@ edit features<br>
 select what details to add<br>
 more details to array <br>
 move everything to one page<br>
-allow for different search kinds - https://developers.google.com/maps/documentation/javascript/places#place_searches
+allow for different search kinds - https://developers.google.com/maps/documentation/javascript/places#place_searches <br>
+convert straight to a .zip containg shapefile 
 
 Thanks to:<br>
 
