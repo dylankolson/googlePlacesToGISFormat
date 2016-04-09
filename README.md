@@ -3,26 +3,26 @@ A simple set of HTML and JS codes that allows you to do a radius search using Go
 
 Current Plans for Development
 
-//feature list
-re size radius circle on box change
-click to set location
-fix zoom level to whole US 
-auto download GEO JSON
-copy to clipboard
-zoom to radius extent
-remove radius circle on new location and re draw new one
-auto reload list
-edit features
-select what details to add
-more details to array 
-move everything to one page
+//feature list <br>
+re size radius circle on box change<br>
+click to set location<br>
+fix zoom level to whole US <br>
+auto download GEO JSON<br>
+copy to clipboard for GEOJSON code <br>
+zoom to radius extent <br>
+remove radius circle on new location and re draw new one <br>
+auto reload list<br>
+edit features<br>
+select what details to add<br>
+more details to array <br>
+move everything to one page<br>
 allow for different search kinds - https://developers.google.com/maps/documentation/javascript/places#place_searches
 
-Thanks to:
+Thanks to:<br>
 
-http://johnsardine.com/freebies/dl-html-css/simple-little-tab/
-https://developers.google.com/maps/documentation/javascript/reference#QueryAutocompletePrediction
-https://www.script-tutorials.com/google-places-api-practice/
-Font awesome
-https://github.com/mapbox/maki/tree/mb-pages/renders
-https://gist.github.com/mapsam/7320ccb2aba0ac372050
+http://johnsardine.com/freebies/dl-html-css/simple-little-tab/<br>
+https://developers.google.com/maps/documentation/javascript/reference#QueryAutocompletePrediction<br>
+https://www.script-tutorials.com/google-places-api-practice/<br>
+Font awesome<br>
+https://github.com/mapbox/maki/tree/mb-pages/renders<br>
+https://gist.github.com/mapsam/7320ccb2aba0ac372050<br>
