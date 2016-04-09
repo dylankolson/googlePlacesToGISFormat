@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>A simple map</title>
+<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+<script src='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.js'></script>
+<script src='script.js'></script>
+<link href='https://api.mapbox.com/mapbox.js/v2.4.0/mapbox.css' rel='stylesheet' />
+<style>
+  body { margin:0; padding:0; }
+  #map { position:absolute; top:0; bottom:0; width:100%; }
+</style>
+</head>
+<body>
+
+<div id='map'></div>
+<script>
+
+
+L.mapbox.accessToken = 'pk.eyJ1IjoiZHlsYW5rb2xzb24iLCJhIjoiY2ltcjRmeGQwMDB0dXZxbHU0cXI1YTA2NyJ9.uP3SVVhhYrJ1AG5EgkxSsw';
+
+
+	
+
+var encodedData = location.search.split('data=')[1];
+var decodedData = window.atob(encodedData); // decode the string
+var json = JSON.parse(decodedData);
+var data = JSON.parse(decodedData);
+
+var map = L.mapbox.map('map', 'mapbox.streets')
+    .setView([data[0].lat, data[0].lng], 4);
+
+var geojson = {};
+geojson['type'] = 'FeatureCollection';
+geojson['features'] = [];
+
+for (var k in data) {
+
+var newFeature = {
+		 "type": "Feature",
+		 "geometry": {"type": "Point", "coordinates": [data[k].lng, data[k].lat]},
+		 "properties": {"name": data[k].name,
+		 "address": data[k].address}
+	}
+	geojson['features'].push(newFeature);
+
+
+}
+
+
+alert(JSON.stringify(geojson));
+map.featureLayer.setGeoJSON(geojson);
+var something = window.open("data:text/json," + encodeURIComponent(JSON.stringify(geojson)),
+                       "_blank");
+something.focus();
+///var http = new XMLHttpRequest();
+//var url = "http://ogre.adc4gis.com/convertJson";
+//var params = "json=" + JSON.stringify(geojson);
+//http.open("POST", url, true);
+ 
+//Send the proper header information along with the request
+//http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+ 
+//http.onreadystatechange = function() {//Call a function when the state changes.
+  //  if(http.readyState == 4 && http.status == 200) {
+  //      alert(http.responseText);
+  //  }
+//}
+//http.send(params);
+
+
+
+  
+  //for(var i = 0; i < json.length; i++){
+
+//L.marker([json[i].lat, json[i].lng]).addTo(map);
+
+
+//}
+
+
+
+</script>
+
+</body>
+</html>
+
