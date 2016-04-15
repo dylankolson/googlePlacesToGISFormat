@@ -5,15 +5,13 @@ Full Documnation and use guide coming soon.
 
 Current Plans for Development
 
-//feature list <br>
-re size radius circle on box change<br>
-click to set location<br>
-fix zoom level to whole US <br>
+//feature list TO BE ADDED OR FIXED <br>
+
+
+remove duplicates from search results list<br>
+create help box on main screen
+ <br>
 auto download GEO JSON<br>
-copy to clipboard for GEOJSON code <br>
-zoom to radius extent <br>
-remove radius circle on new location and re draw new one <br>
-auto reload list<br>
 edit features<br>
 select what details to add<br>
 more details to array <br>
