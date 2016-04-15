@@ -1,15 +1,36 @@
 	<!DOCTYPE html>
+	<head>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places&sensor=false"></script>
 	<script src="script.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#gmap_radius").change(function(){
+        updateCircle();
+    });
+	
+	
+});
+
+
+</script>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	
+	</head>
+	<body>
 	<div id="gmap_canvas"></div>
 	<div class="actions">
 	    <div class="button">
 	        <label for="gmap_where">Where:</label>
-	        <input id="gmap_where" type="text" name="gmap_where" /></div>
+	        <input id="gmap_where" type="text" name="gmap_where" />
+			<br><br>
+			 <input type="text" id="lat" name="lat" value="40.7143528" /> <br><br>
+			<input type="text" id="lng" name="lng" value="-74.0059731" />
+			
+			
+			</div>
 	    <div id="button2" class="button" onclick="findAddress(); return false;">Set Location</div>
 	    <div class="button">
 	        <label for="gmap_keyword">Keyword (optional):</label>
@@ -112,21 +133,29 @@
 </select>
 	    </div>
 	    <div class="button">
-	        <label for="gmap_radius">Radius - Max 50000 Meters:</label>
+	        <label for="gmap_radius">Radius - Max 5000 Meters:</label>
 			
-	        <input type="text" id="gmap_radius" value="10000"> </input>
+	        <input type="text" id="gmap_radius" name="gmap_radius" onkeyup="this.value = minmax(this.value, 100, 5000)" value="5000"> </input>
 	           
 	    </div>
-		
-	    <input type="hidden" id="lat" name="lat" value="40.7143528" />
-	    <input type="hidden" id="lng" name="lng" value="-74.0059731" />
+		 
+	   
 	    <div id="button1" class="button" onclick="findPlaces(); return false;">Search for objects</div>
 		<div id="reload" class="button" onclick="reloadList();">Reload list after search</div>
 		<div id="clear" class="button" onclick="clearList();">Clear List</div>
 		<div id="send" class="button" onclick="sendList();">Send to Geo JSON</div>
-	</div>
-	
-	
+	</DIV>
+	<script type="text/javascript">
+function minmax(value, min, max) 
+{
+    if(parseInt(value) < min || isNaN(value)) 
+        return 100; 
+    else if(parseInt(value) > max) 
+        return 5000; 
+    else return value;
+}
+</script>
+
 	 
 	 <table id="list">
 	 <p >
@@ -138,7 +167,7 @@
 
 
 	
-	
+	</body>
 	
 	
 	
