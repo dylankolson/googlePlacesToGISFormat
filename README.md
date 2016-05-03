@@ -1,21 +1,23 @@
 # googlePlacesToGISFormat
+To use download and unzip and open readme.html and select.html
+
 A simple set of HTML and JS codes that allows you to do a radius search using Google's Places API, search by location,type and keyword. Create a list and send it to be converted to GEOJSON. 
 
-Full Documnation and use guide coming soon. 
+This tool has only been tested in Chrome. Open the select.html file and enter the location you want to 
+work with. Address and zip codes can be used in the first box. Search using the keyword or/and the type 
+drop down list. Click search for objects and in the list at the bottom you can remove certain results if need be.
+Clicking the map will move the radius bubble around allowing for additional searches. When done hit send to GEO JSOn
+and a new window will open with the GEO JSON code.
 
 Current Plans for Development
 
-//feature list TO BE ADDED OR FIXED <br>
+//FEATURE LIST TO BE ADDED OR FIXED <br>
 
-
-remove duplicates from search results list<br>
-create help box on main screen
  <br>
 auto download GEO JSON<br>
 edit features<br>
 select what details to add<br>
 more details to array <br>
-move everything to one page<br>
 allow for different search kinds - https://developers.google.com/maps/documentation/javascript/places#place_searches <br>
 convert straight to a .zip containg shapefile 
 
