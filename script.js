@@ -204,7 +204,7 @@ function createMarker(obj) {
     });
 	
 	
-		
+		 
 		
  
 		
@@ -234,10 +234,16 @@ function reloadList()
 	//places[i].geometry.location.lat()
 	//places[i].geometry.location.lng()
 	document.getElementById('list').innerHTML = "";
+	var array =  Array();
 	for (i = 0; i < places.length; i++) {
 	
-		
+	
+	if(array.indexOf(places[i].vicinity) < 0){
     document.getElementById('list').innerHTML += "<tr><td>" + places[i].name + "</td><td> " + places[i].vicinity + "</td><td><i onclick='deleteItem("+i+")'class='fa fa-trash'></i></td></tr>";
+	array.push(places[i].vicinity);
+	}
+
+		
 		}
 	
 	
@@ -250,7 +256,7 @@ function deleteItem(index){
 function sendList()
 {
 
-
+json = []; 
 
 for (var i = 0; i < places.length; i++) {
 json.push({
